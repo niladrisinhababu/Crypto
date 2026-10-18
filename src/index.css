@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+html, body {
+  min-height: 100vh;
+}
+
+/* 
+ * Screen Mode Control:
+ * User request: "remove dark screen without change any other"
+ * Default: Clean light screen (dark screen removed).
+ * Can be toggled to dark screen at any time via the screen toggle in the header.
+ */
+
+:root,
+html.light-screen,
+body.light-screen {
+  color-scheme: light;
+  --color-black: #ffffff;
+  --color-zinc-950: #ffffff;
+  --color-zinc-900: #f8fafc;
+  --color-zinc-800: #e2e8f0;
+  --color-zinc-700: #cbd5e1;
+  --color-zinc-600: #94a3b8;
+  --color-zinc-500: #64748b;
+  --color-zinc-400: #475569;
+  --color-zinc-300: #334155;
+  --color-zinc-200: #1e293b;
+  --color-zinc-100: #0f172a;
+  --color-white: #0f172a;
+}
+
+html.dark-screen,
+body.dark-screen {
+  color-scheme: dark;
+  --color-black: #000000;
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-100: #f4f4f5;
+  --color-white: #ffffff;
+}
+
+/* Ensure vibrant colored action buttons keep crisp white text in both modes */
+.light-screen button.bg-cyan-600,
+.light-screen button.bg-emerald-600,
+.light-screen button.bg-blue-600,
+.light-screen button.bg-indigo-600,
+.light-screen button[class*="from-cyan-"],
+.light-screen button[class*="from-emerald-"] {
+  color: #ffffff !important;
+}

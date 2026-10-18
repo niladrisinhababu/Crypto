@@ -1,0 +1,6 @@
+{
+  "name": "VegaEdge Crypto Intelligence",
+  "description": "Real-time crypto intelligence, automated trading engine for top 5 high-probability coins with automated stop-loss, derivatives analytics, options chain, and universal exchange connector.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
